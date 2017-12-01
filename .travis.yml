@@ -1,0 +1,12 @@
+language: python
+sudo: false
+python:
+    #- "2.6"
+    - "2.7"
+      #- "3.4"
+      #- "3.5"
+    - "3.6"
+      #- "pypy"
+script:
+    - python -m gnupg.test.test_gnupg  parsers encodings basic genkey sign \
+      crypt listkeys keyrings recvkeys revokekey expiration signing
